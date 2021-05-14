@@ -12,3 +12,26 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+//0-600px
+
+@mixin repond-phone {
+    @media (max-width: 600px) {@content};
+    
+}
+
+@mixin repond($beakpoint){
+    @if $beakpoint == phone {
+        @media (max-width: 37.5em) {@content};  //600px/16 =37.5em
+    }
+    @if $beakpoint == tab-port {
+        @media (max-width: 56.25em) {@content};  //900px
+    }
+    @if $beakpoint == tab-land {
+        @media (max-width: 75em) {@content}; //1200px
+    }
+    @if $beakpoint == big-desktop {
+        @media (min-width: 112.5em) {@content}; //1800px
+    }
+}
