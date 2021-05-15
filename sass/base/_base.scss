@@ -8,25 +8,25 @@
 
 html {
     font-size: 62.5%;
-    @include repond-phone{
-        font-size:50%;
-    }
-    @include repond(phone){
-        font-size:50%;
+   
+    @include repond(tab-land){
+        font-size:56.2%;
     }
     @include repond(tab-port){
-        font-size:60%;
+        font-size:50%;
     }
-    @include repond(tab-land){
-        font-size:70%;
-    }
+   
     @include repond(big-desktop){
-        font-size:80%;
+        font-size:75%;
     }
 
 }
 body {
     box-sizing: border-box;
+    padding: 3rem;
+    @include repond(tab-port){
+        padding:0;
+    }
 }
 
 
