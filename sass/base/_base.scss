@@ -25,7 +25,7 @@ body {
     box-sizing: border-box;
     padding: 3rem;
     @include repond(tab-port){
-        padding:0;
+        padding: 0;
     }
 }
 

@@ -8,6 +8,18 @@
     padding-left: 9rem;
     font-size: $default-font-size;
     transform:skewX(-12deg);
+
+    @include repond(tab-port){
+        width:100%;
+        padding:6rem;
+        padding-left:7rem;
+
+        
+    }
+    @include repond(phone){
+        transform: skewX(0);
+    }
+
   
     &__shape{
         width:15rem;
@@ -20,6 +32,9 @@
         transform:translate(-3rem) skewX(12deg);
         position: relative;
         transition: all 0.5s;
+        @include repond(phone){
+            transform:translateX(-3rem) skewX(0);
+        }
     }
     &__img{
         height: 100%;
@@ -29,6 +44,11 @@
     }
     &__text{
         transform:skewX(12deg);
+
+        @include repond(phone){
+            transform:skewX(0);
+        }
+    
     }
     &__caption{
         position: absolute;
